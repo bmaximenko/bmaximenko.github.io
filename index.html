@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Redirecting</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXQ2XVBM8C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VXQ2XVBM8C');
+    </script>
+    <script>
+        window.urlToRedirectTo = function() {
+            const spreadsheetUrl = "https://docs.google.com/spreadsheets/d/17eXPnhW_wwAKH_gIr5pBRdm1sHPQtb-IzMa9NzJmZkE/edit#gid=";
+            const tabNameToIdMap = {
+                'ssd': '702320902',
+                'ram': '1963594762',
+                'laptops': '306740013',
+            };
+
+            var tabId = tabNameToIdMap[window.location.pathname.substring(1)] || "0";
+
+            return spreadsheetUrl + tabId;
+        }
+    </script>
+    <meta HTTP-EQUIV="refresh" content="1; url=https://bohdan.olx.ua">
+</head>
+<body onLoad="location.replace(urlToRedirectTo())">
+Redirecting you to https://docs.google.com/spreadsheets/d/17eXPnhW_wwAKH_gIr5pBRdm1sHPQtb-IzMa9NzJmZkE/edit
+</body>
+</html>
